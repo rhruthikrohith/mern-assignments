@@ -1,0 +1,41 @@
+GET http://127.0.0.1:3000/user-api/users
+###
+POST  http://127.0.0.1:3000/user-api/user
+Content-Type: application/json
+
+{
+    "id":10,
+    "name":"sihisj"
+}
+###
+PUT  http://127.0.0.1:3000/user-api/users
+Content-Type: application/json
+
+{
+    "id":10,
+    "name":"dkfkdkf"
+}
+###
+GET  http://127.0.0.1:3000/user-api/users/10
+
+
+###
+DELETE  http://127.0.0.1:3000/user-api/usersd
+
+###
+POST  http://127.0.0.1:3000/product-api/products
+Content-Type: application/json
+
+{
+    "id":11,
+    "name":"sjfjsfj"
+}
+
+###
+GET http://127.0.0.1:3000/productapi/products
+
+###
+GET http://127.0.0.1:3000/productapi/products/11
+
+###
+GET http://127.0.0.1:3000/productapi/products/sjfjsfj

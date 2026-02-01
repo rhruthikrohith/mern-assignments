@@ -1,0 +1,74 @@
+GET  http://127.0.0.1:4000/user-api/user
+
+###
+GET  http://127.0.0.1:4000/user-api/user1/697dbba799e839d7d36b6534
+
+###
+POST  http://127.0.0.1:4000/user-api/users
+Content-Type: application/json
+
+{
+    "username":"fefy",
+    "password":"ekjkej",
+    "age":18
+}
+
+###
+PUT  http://127.0.0.1:4000/user-api/users/697dbba799e839d7d36b6534
+Content-Type: application/json
+
+{
+    "username":"fefy",
+    "password":"ekjkej",
+    "age":19
+}
+
+###
+DELETE  http://127.0.0.1:4000/user-api/users/697dbba799e839d7d36b6534
+
+###
+POST  http://127.0.0.1:4000/prodapi/products
+Content-Type: application/json
+
+{
+    "prodname":"rohtith",
+    "pid":"400",
+    "price":180
+}
+
+###
+GET  http://127.0.0.1:4000/prodapi/products
+
+###
+GET  http://127.0.0.1:4000/prodapi/products/697dd363a74015dd72622c2f
+
+###
+PUT http://127.0.0.1:4000/prodapi/products/697dd363a74015dd72622c2f
+Content-Type: application/json
+
+{
+    "prodname": "sahith",
+  "pid": 90,
+  "price": 183450
+}
+
+###
+POST  http://127.0.0.1:4000/prodapi/products
+Content-Type: application/json
+
+{
+    "prodname":"dfkmfk",
+    "pid":"2323",
+    "price":39803940
+}
+
+###
+PUT http://127.0.0.1:4000/prodapi/products/697dd363a74015dd72622c2f/review
+Content-Type: application/json
+
+{
+    "rating":5,
+    "comments":"good"
+}
+###
+DELETE http://127.0.0.1:4000/prodapi/products/697f535d3bd358a682ae8868
