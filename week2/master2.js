@@ -9,28 +9,41 @@ const courses = [
   { id: 102, title: "React", price: 1499, published: false },
   { id: 103, title: "Node", price: 1299, published: true }
 ];
+
 const cart = [
   { courseId: 101, qty: 1 },
   { courseId: 103, qty: 2 }
 ];
- let ab=cart.map(a=>{
-     let v=courses.find(v=>v.id );
-     return{
-     courseId: a.courseId,
-     title: v.title,
-     price: v.price,
-     qty: a.qty,
-     published:v.published
- };
- });
-console.log(ab)
- let cd=courses.reduce((a,b)=>a+b.price,0);
- console.log(cd)
- let re=[...cart]
- console.log(re)
-let rs=re.map(a=>({...a,qty:a.qty+1}))
-console.log(rs)
+
+// Map cart items with course details
+let ab = cart.map(a => {
+  let v = courses.find(v => v.id);
+  return {
+    courseId: a.courseId,
+    title: v.title,
+    price: v.price,
+    qty: a.qty,
+    published: v.published
+  };
+});
+console.log(ab);
+
+// Total price of all courses
+let cd = courses.reduce((a, b) => a + b.price, 0);
+console.log(cd);
+
+// Copy cart array
+let re = [...cart];
+console.log(re);
+
+// Increase quantity for each cart item
+let rs = re.map(a => ({ ...a, qty: a.qty + 1 }));
+console.log(rs);
+
+// Delete first item from mapped array
 delete ab[0];
-console.log(ab)
+console.log(ab);
+
+// Remove empty values
 let qq = ab.filter(item => item && item.price > 0);
 console.log(qq);
