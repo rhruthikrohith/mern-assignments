@@ -1,18 +1,23 @@
-let obj=
-{
-    a:10,
-    b:20,
-    Clg:'anurag',
-    clgadress:{
-        anurg:"dlfj"
-
+// Original object
+let obj = {
+    a: 10,
+    b: 20,
+    Clg: 'anurag',
+    clgadress: {
+        anurg: "dlfj"
     }
-}
-let copyobj={...obj}
-obj.a=1234;
-obj.a=30;
-obj.clgadress.anurg="aaaaa"
-console.log(obj)
-console.log(copyobj)
-//primitives cna be changed modified
-//non cant be changed or modified
+};
+
+// Shallow copy using spread operator
+let copyobj = { ...obj };
+
+// Modify values
+obj.a = 30;
+obj.clgadress.anurg = "aaaaa";
+
+console.log(obj);
+console.log(copyobj);
+
+// Primitives change independently
+// Nested objects share reference in shallow copy
+
